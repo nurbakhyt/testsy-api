@@ -15,7 +15,10 @@ class TestController extends Controller
   */
   public function show($id)
   {
-    return Test::where('lecture_id', $id)->get();
+    $tests =  Test::where('lecture_id', $id)->get();
+    if (count($tests) == 0)
+      return response('Not Found', 404);
+    else return $tests;
   }
 
 }
