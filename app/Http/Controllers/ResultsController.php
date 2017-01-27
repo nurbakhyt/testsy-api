@@ -10,7 +10,6 @@ class ResultsController extends Controller
 {
   public function index() {
     $results = Result::all();
-    // dd($results);
     $lecture = $results[0]->lecture->title;
     return response()->json([
       'lecture' => $lecture,
@@ -25,7 +24,6 @@ class ResultsController extends Controller
     $ids = [];
     $scores = 0;
     $fails = 0;
-    // dd($data);
     foreach($data as $item) {
       $test = Test::find($item['testId']);
       if ($item['selected'] == $test->answer)
