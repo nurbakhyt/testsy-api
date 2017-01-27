@@ -2,7 +2,7 @@
 
 > A Laravel project
 
-## After clonning 
+## After cloning 
 
 ``` bash
 # install dependencies
